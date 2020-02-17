@@ -1,4 +1,36 @@
+pdu structure
+  - 端口
+  - 上电
+  - 下电
+  
 server structure
+  - 收到配置文件后，亮起占用标志，表示当前服务器被测试控制占用
+  - serverID
+  - 清除log
+  - 获取log
+  
 ssd structure
+  - smart信息（含扩展信息）
+  - nvme 信息
+  - bus号
+  - 写放大状态
+  - Precondition
+  - secureErase
+  
+controller structure
+  - 设置中央smart数据库，存储所有ssd的smart信息，SN为键名。
+  - 可连接指定服务器，或扫描可用服务器，根据占用标志判断服务器是否可用
+  - 本地存储配置文件，测试开始后，发送配置文件到指定服务器
+
 test structure
+  - 开始
+  - 终止
+  - 暂停
+  - 顺序设置
+  - 结果检查
+
 log structure
+  - 写入
+  - 滚动清除
+  - 清空
+  - scan
